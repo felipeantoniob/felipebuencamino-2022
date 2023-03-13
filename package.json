@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "personal-portfolio",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -17,16 +17,15 @@
     "@hookform/resolvers": "^2.9.10",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@tailwindcss/forms": "^0.5.3",
     "astro": "^1.5.2",
+    "astro-icon": "^0.8.0",
+    "prettier-plugin-astro": "^0.7.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-hook-form": "^7.40.0",
-    "react-icons": "^4.6.0",
     "tailwindcss": "^3.0.24",
     "zod": "^3.19.1"
   },
-  "devDependencies": {
-    "@tailwindcss/forms": "^0.5.3",
-    "prettier-plugin-astro": "^0.7.0"
-  }
+  "devDependencies": {}
 }
