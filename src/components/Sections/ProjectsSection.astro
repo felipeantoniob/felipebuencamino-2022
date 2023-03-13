@@ -1,9 +1,16 @@
 ---
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
+import { Icon } from 'astro-icon'
 import { PROJECTS } from '../../constants'
 ---
 
-<section id="projects" class="bg-slate-900 mt-48">
+<style lang="css">
+  [astro-icon] {
+    width: 32px;
+    height: 32px;
+  }
+</style>
+
+<section id="projects" class="bg-slate-900 pt-16">
   <div class="bg-slate-900 mx-8">
     <h2 class="text-2xl sm:text-4xl text-gray-200 font-medium text-center">PROJECTS</h2>
     <div class="mt-16 flex flex-col gap-32">
@@ -11,7 +18,7 @@ import { PROJECTS } from '../../constants'
         PROJECTS.map((project, index) => (
           <div class={`flex flex-col gap-8 ${index % 2 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
             <div class="flex-1 lg:p-0">
-              <img class="w-full aspect-video object-contain pointer-events-none bg-gray-500 animate-pulse" />
+              <img class="w-full rounded-md aspect-video object-contain pointer-events-none bg-gray-500 animate-pulse" />
             </div>
             <div
               class={`flex-1 text-center flex flex-col justify-center ${
@@ -43,7 +50,7 @@ import { PROJECTS } from '../../constants'
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <FiExternalLink client:visible size="32px" />
+                  <Icon name="tabler:external-link" />
                 </a>
                 {project.codeUrl && (
                   <a
@@ -52,7 +59,7 @@ import { PROJECTS } from '../../constants'
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <FiGithub client:visible size="32px" />
+                    <Icon name="codicon:github-alt" />
                   </a>
                 )}
               </div>
