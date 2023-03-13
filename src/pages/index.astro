@@ -1,0 +1,30 @@
+---
+import Footer from '../components/Footer.astro'
+import Navbar from '../components/Navbar.astro'
+import AboutSection from '../components/Sections/AboutSection.astro'
+import ContactSection from '../components/Sections/ContactSection.astro'
+import HeroSection from '../components/Sections/HeroSection.astro'
+import ProjectsSection from '../components/Sections/ProjectsSection.astro'
+import SkillsSection from '../components/Sections/SkillsSection'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Felipe Buencamino">
+  <Navbar />
+  <main class="bg-slate-900">
+    <div class="max-w-6xl mx-auto">
+      <HeroSection />
+      <AboutSection />
+      <ProjectsSection />
+      <SkillsSection />
+      <ContactSection />
+      <Footer />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  body {
+    font-family: 'Sen', sans-serif;
+  }
+</style>
