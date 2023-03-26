@@ -41,6 +41,7 @@ const ScrollToTopButton = () => {
   return (
     <div className="fixed bottom-0 left-0 max-w-7xl right-0 w-full mx-auto flex justify-end mb-8">
       <button
+        aria-label="Scroll to top button"
         onClick={scrollToTop}
         className={`p-2 rounded-md shadow-sm shadow-slate-900 bg-slate-700 transition ${
           isVisibleOnScroll ? 'opacity-100' : 'opacity-0'

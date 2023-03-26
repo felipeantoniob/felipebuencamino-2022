@@ -49,7 +49,9 @@ const ContactForm = () => {
   return (
     <form className="flex flex-col gap-4 mx-4" onSubmit={handleSubmit(onSubmit)}>
       <div ref={parent}>
-        <p className="text-sm  sm:text-base">Name</p>
+        <label htmlFor="name" className="text-sm  sm:text-base">
+          Name
+        </label>
         <input
           {...register('name')}
           type="text"
@@ -58,7 +60,9 @@ const ContactForm = () => {
         {errors.name?.message && <p className="text-red-500">{errors.name?.message}</p>}
       </div>
       <div ref={parent}>
-        <p className="text-sm sm:text-base">Email</p>
+        <label htmlFor="email" className="text-sm sm:text-base">
+          Email
+        </label>
         <input
           {...register('email')}
           type="text"
@@ -67,7 +71,9 @@ const ContactForm = () => {
         {errors.email?.message && <p className="text-red-500">{errors.email?.message}</p>}
       </div>
       <div ref={parent}>
-        <p className="text-sm sm:text-base">Message</p>
+        <label htmlFor="message" className="text-sm sm:text-base">
+          Message
+        </label>
         <textarea
           {...register('message')}
           className="form-textarea h-24 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"

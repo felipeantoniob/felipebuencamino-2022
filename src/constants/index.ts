@@ -1,8 +1,8 @@
-import mexplayImage from '../assets/images/Mexplay.png'
-import spotifyReplayImage from '../assets/images/SpotifyReplay.png'
-import toDoListImage from '../assets/images/ToDoList.png'
-import ts808Image from '../assets/images/TS-808.png'
-import cinehubImage from '../assets/images/Cinehub.png'
+import mexplayImage from '../assets/images/Mexplay.webp'
+import spotifyReplayImage from '../assets/images/SpotifyReplay.webp'
+import toDoListImage from '../assets/images/ToDoList.webp'
+import ts808Image from '../assets/images/TS-808.webp'
+import cinehubImage from '../assets/images/Cinehub.webp'
 
 export const PROJECTS = [
   {

@@ -4,10 +4,23 @@ import { motion } from 'framer-motion'
 
 type Project = typeof PROJECTS[number]
 
-const ProjectImage = ({ imageUrl, siteUrl }: { imageUrl: string; siteUrl: string }) => (
-  <a href={siteUrl} className="flex-1 border-2 border-slate-700 rounded-md lg:p-0 hover:opacity-50 transition">
+const ProjectImage = ({
+  imageUrl,
+  siteUrl,
+  projectTitle,
+}: {
+  imageUrl: string
+  siteUrl: string
+  projectTitle: string
+}) => (
+  <a
+    href={siteUrl}
+    aria-label={`Check out ${projectTitle}'s site`}
+    className="flex-1 border-2 border-slate-700 rounded-md lg:p-0 hover:opacity-50 transition"
+  >
     <img
       src={imageUrl}
+      alt={`${projectTitle} screenshot`}
       className="w-full rounded-md aspect-video object-cover shadow shadow-slate-700 pointer-events-none"
     />
   </a>
@@ -17,6 +30,7 @@ const ProjectTechnologies = ({ technologies }: { technologies: Project['technolo
   <div className="font-mono mt-8 text-sm">
     {technologies.map((technology, index) => (
       <a
+        aria-label={`Go to the ${technology.name} website`}
         key={index}
         href={technology.url}
         rel="noreferrer"
@@ -30,10 +44,12 @@ const ProjectTechnologies = ({ technologies }: { technologies: Project['technolo
 )
 
 const ProjectLinks = ({
+  projectTitle,
   siteUrl,
   codeUrl,
   index,
 }: {
+  projectTitle: Project['title']
   siteUrl: Project['siteUrl']
   codeUrl: Project['codeUrl']
   index: number
@@ -43,12 +59,19 @@ const ProjectLinks = ({
       index % 2 ? 'lg:justify-start' : 'lg:justify-end'
     } gap-4 mt-8`}
   >
-    <a href={siteUrl} className="transition-all hover:opacity-75" rel="noreferrer" target="_blank">
+    <a
+      href={siteUrl}
+      aria-label={`Check out ${projectTitle}'s site`}
+      className="transition-all hover:opacity-75"
+      rel="noreferrer"
+      target="_blank"
+    >
       <Icon icon="tabler:external-link" width={32} height={32} />
     </a>
     {codeUrl && (
       <a
         href={codeUrl}
+        aria-label={`Check out ${projectTitle}'s code`}
         className="transition-all hover:opacity-75"
         rel="noreferrer"
         target="_blank"
@@ -70,16 +93,21 @@ const Project = ({ project, index }: { project: Project; index: number }) => (
     }}
     className={`flex flex-col gap-8 ${index % 2 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
   >
-    <ProjectImage imageUrl={project.image} siteUrl={project.siteUrl} />
+    <ProjectImage imageUrl={project.image} siteUrl={project.siteUrl} projectTitle={project.title} />
     <div
       className={`flex-1 text-center flex flex-col justify-center ${
         index % 2 ? 'lg:text-left' : 'lg:text-right'
       }`}
     >
-      <h4 className="font-bold text-2xl">{project.title}</h4>
+      <h3 className="font-bold text-2xl">{project.title}</h3>
       <p className="mt-8">{project.description}</p>
       <ProjectTechnologies technologies={project.technologies} />
-      <ProjectLinks siteUrl={project.siteUrl} codeUrl={project.codeUrl} index={index} />
+      <ProjectLinks
+        siteUrl={project.siteUrl}
+        codeUrl={project.codeUrl}
+        projectTitle={project.title}
+        index={index}
+      />
     </div>
   </motion.div>
 )
