@@ -2,6 +2,7 @@ import emailjs from '@emailjs/browser'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { z } from 'zod'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 const PUBLIC_KEY = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
 const TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID
@@ -35,6 +36,8 @@ const sendEmail = async (data: FormSchemaType): Promise<boolean> => {
 }
 
 const ContactForm = () => {
+  const [parent] = useAutoAnimate({ duration: 100 })
+
   const {
     register,
     handleSubmit,
@@ -45,29 +48,29 @@ const ContactForm = () => {
 
   return (
     <form className="flex flex-col gap-4 mx-4" onSubmit={handleSubmit(onSubmit)}>
-      <div>
+      <div ref={parent}>
         <p className="text-sm  sm:text-base">Name</p>
         <input
           {...register('name')}
           type="text"
-          className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-black"
+          className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
         />
         {errors.name?.message && <p className="text-red-500">{errors.name?.message}</p>}
       </div>
-      <div>
+      <div ref={parent}>
         <p className="text-sm sm:text-base">Email</p>
         <input
           {...register('email')}
           type="text"
-          className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-black"
+          className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
         />
         {errors.email?.message && <p className="text-red-500">{errors.email?.message}</p>}
       </div>
-      <div>
+      <div ref={parent}>
         <p className="text-sm sm:text-base">Message</p>
         <textarea
           {...register('message')}
-          className="form-textarea h-24 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-black"
+          className="form-textarea h-24 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
         />
         {errors.message?.message && <p className="text-red-500">{errors.message?.message}</p>}
       </div>

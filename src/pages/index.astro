@@ -1,24 +1,26 @@
 ---
 import Footer from '../components/Footer.astro'
-import Navbar from '../components/Navbar.astro'
-import AboutSection from '../components/Sections/AboutSection.astro'
-import ContactSection from '../components/Sections/ContactSection.astro'
-import HeroSection from '../components/Sections/HeroSection.astro'
-import ProjectsSection from '../components/Sections/ProjectsSection.astro'
-import SkillsSection from '../components/Sections/SkillsSection.astro'
+import Navbar from '../components/Navbar'
+import ScrollToTopButton from '../components/ScrollToTopButton'
+import AboutSection from '../components/Sections/AboutSection'
+import ContactSection from '../components/Sections/ContactSection'
+import HeroSection from '../components/Sections/HeroSection'
+import ProjectsSection from '../components/Sections/ProjectsSection'
+import SkillsSection from '../components/Sections/SkillsSection'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Felipe Buencamino">
-  <Navbar />
-  <main class="bg-slate-900 text-slate-300">
+  <Navbar client:load />
+  <main class="text-slate-300">
     <div class="max-w-6xl mx-auto">
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ContactSection />
+      <HeroSection client:load />
+      <AboutSection client:load />
+      <ProjectsSection client:load />
+      <SkillsSection client:load />
+      <ContactSection client:load />
       <Footer />
+      <ScrollToTopButton client:load />
     </div>
   </main>
 </Layout>

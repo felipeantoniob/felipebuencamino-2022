@@ -1,9 +1,15 @@
+import mexplayImage from '../assets/images/Mexplay.png'
+import spotifyReplayImage from '../assets/images/SpotifyReplay.png'
+import toDoListImage from '../assets/images/ToDoList.png'
+import ts808Image from '../assets/images/TS-808.png'
+import cinehubImage from '../assets/images/Cinehub.png'
+
 export const PROJECTS = [
   {
     title: 'Mexplay',
     description:
       'An online casino website and mobile app catering to the Mexican market that offers users the opportunity to play a wide range of casino games, bet on sports, and win prizes.',
-    image: '/images/spotifaves.png',
+    image: mexplayImage,
     tags: ['react', 'javascript'],
     codeUrl: null,
     siteUrl: 'https://mexplay.mx/',
@@ -17,13 +23,13 @@ export const PROJECTS = [
     ],
   },
   {
-    title: 'Spotifaves',
+    title: 'Spotify Replay',
     description:
-      'A website where users can view their top artists, top tracks, top genres, and recently played tracks on Spotify. They can also generate playlists based on their personalized data to share with friends.',
-    image: '/images/spotifaves.png',
+      'A web app where users can view their top artists, tracks, and genres on Spotify. They can also generate playlists based on their personalized data to share with friends.',
+    image: spotifyReplayImage,
     tags: ['react', 'javascript'],
-    codeUrl: 'https://github.com/felipeantoniob/spotifaves#readme',
-    siteUrl: 'https://spotifaves.vercel.app/',
+    codeUrl: 'https://github.com/felipeantoniob/spotify-replay#readme',
+    siteUrl: 'https://spotify-replay.vercel.app/',
     id: 1,
     technologies: [
       { name: 'Next.js', url: 'https://nextjs.org/' },
@@ -37,8 +43,8 @@ export const PROJECTS = [
   {
     title: 'Cinehub',
     description:
-      ' A website that lets users search for movies and view its details such as the plot summary, genres, and actors. It queries the TMDB API to retrieve movies based on a search term.',
-    image: '/images/cinehub.png',
+      'A movie database app that allows users to search for movies and view details such as the plot summary, genres, and actors and uses the TMDB API to retrieve data on the movies.',
+    image: cinehubImage,
     tags: ['react', 'javascript'],
     codeUrl: 'https://github.com/felipeantoniob/cinehub#readme',
     siteUrl: 'https://cinehub.vercel.app',
@@ -47,29 +53,31 @@ export const PROJECTS = [
       { name: 'Next.js', url: 'https://nextjs.org/' },
       { name: 'Typescript', url: 'https://www.typescriptlang.org/' },
       { name: 'Tailwind', url: 'https://tailwindcss.com/' },
-      { name: 'Framer-motion', url: 'https://www.framer.com/motion/' },
+      { name: 'tRPC', url: 'https://trpc.io/' },
+      { name: 'Prisma', url: 'https://www.prisma.io/' },
     ],
   },
   {
-    title: 'JS-808',
+    title: 'TS-808',
     description:
       'An interactive drum machine website where users can play 16 drum pads with their mouse or keyboard. The drum samples were sampled from a Roland TR-808 drum machine.',
-    image: '/images/js_808.png',
+    image: ts808Image,
     tags: ['react', 'javascript'],
     codeUrl: 'https://github.com/felipeantoniob/JS-808#readme',
     siteUrl: 'https://js-808.vercel.app/',
     id: 3,
     technologies: [
-      { name: 'Next.js', url: 'https://nextjs.org/' },
+      { name: 'Vite', url: 'https://vitejs.dev/' },
+      { name: 'Vitest', url: 'https://vitest.dev/' },
       { name: 'Typescript', url: 'https://www.typescriptlang.org/' },
-      { name: 'Bootstrap', url: 'https://getbootstrap.com/' },
+      { name: 'Tailwind', url: 'https://tailwindcss.com/' },
     ],
   },
   {
     title: 'To-Do List',
     description:
       'A simple to-do list website where users can add items to the list, mark items as complete or incomplete, edit items, and delete items.',
-    image: '/images/todo_list.png',
+    image: toDoListImage,
     tags: ['react', 'javascript'],
     codeUrl: 'https://github.com/felipeantoniob/todo-list#readme',
     siteUrl: 'https://next-todo-app-two.vercel.app',
