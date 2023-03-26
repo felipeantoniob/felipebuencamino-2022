@@ -1,8 +1,9 @@
 import emailjs from '@emailjs/browser'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { toast, Toaster } from 'react-hot-toast'
 import { z } from 'zod'
-import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 const PUBLIC_KEY = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
 const TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID
@@ -21,8 +22,12 @@ type FormSchemaType = {
 }
 
 const onSubmit: SubmitHandler<FormSchemaType> = async (data): Promise<void> => {
-  await sendEmail(data)
-  alert('Email sent successfully!')
+  const isSuccessful = await sendEmail(data)
+  if (isSuccessful) {
+    toast.success('Email sent successfully!')
+  } else {
+    toast.error('Email failed to send!')
+  }
 }
 
 const sendEmail = async (data: FormSchemaType): Promise<boolean> => {
@@ -47,43 +52,46 @@ const ContactForm = () => {
   })
 
   return (
-    <form className="flex flex-col gap-4 mx-4" onSubmit={handleSubmit(onSubmit)}>
-      <div ref={parent}>
-        <label htmlFor="name" className="text-sm  sm:text-base">
-          Name
-        </label>
-        <input
-          {...register('name')}
-          type="text"
-          className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
-        />
-        {errors.name?.message && <p className="text-red-500">{errors.name?.message}</p>}
-      </div>
-      <div ref={parent}>
-        <label htmlFor="email" className="text-sm sm:text-base">
-          Email
-        </label>
-        <input
-          {...register('email')}
-          type="text"
-          className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
-        />
-        {errors.email?.message && <p className="text-red-500">{errors.email?.message}</p>}
-      </div>
-      <div ref={parent}>
-        <label htmlFor="message" className="text-sm sm:text-base">
-          Message
-        </label>
-        <textarea
-          {...register('message')}
-          className="form-textarea h-24 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
-        />
-        {errors.message?.message && <p className="text-red-500">{errors.message?.message}</p>}
-      </div>
-      <button className="bg-slate-500 py-4 rounded-md mt-4 text-white text-xl hover:opacity-75 transition-all">
-        Submit
-      </button>
-    </form>
+    <>
+      <Toaster toastOptions={{ className: 'bg-red-500' }} />
+      <form className="flex flex-col gap-4 mx-4" onSubmit={handleSubmit(onSubmit)}>
+        <div ref={parent}>
+          <label htmlFor="name" className="text-sm  sm:text-base">
+            Name
+          </label>
+          <input
+            {...register('name')}
+            type="text"
+            className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
+          />
+          {errors.name?.message && <p className="text-red-500">{errors.name?.message}</p>}
+        </div>
+        <div ref={parent}>
+          <label htmlFor="email" className="text-sm sm:text-base">
+            Email
+          </label>
+          <input
+            {...register('email')}
+            type="text"
+            className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
+          />
+          {errors.email?.message && <p className="text-red-500">{errors.email?.message}</p>}
+        </div>
+        <div ref={parent}>
+          <label htmlFor="message" className="text-sm sm:text-base">
+            Message
+          </label>
+          <textarea
+            {...register('message')}
+            className="form-textarea h-24 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
+          />
+          {errors.message?.message && <p className="text-red-500">{errors.message?.message}</p>}
+        </div>
+        <button className="bg-slate-500 py-4 rounded-md mt-4 text-white text-xl hover:opacity-75 transition-all">
+          Submit
+        </button>
+      </form>
+    </>
   )
 }
 

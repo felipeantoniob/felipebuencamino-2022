@@ -4,6 +4,7 @@ specifiers:
   '@astrojs/react': ^2.1.0
   '@astrojs/tailwind': ^3.1.1
   '@emailjs/browser': ^3.10.0
+  '@fontsource/sen': ^4.5.9
   '@formkit/auto-animate': 1.0.0-beta.6
   '@hookform/resolvers': ^2.9.10
   '@iconify/react': ^4.1.0
@@ -25,6 +26,7 @@ dependencies:
   '@astrojs/react': 2.1.0_3xleytyzprlgycb2ded54tx72i
   '@astrojs/tailwind': 3.1.1_7pxhldtqxqapdoi4tql47ep6su
   '@emailjs/browser': 3.10.0
+  '@fontsource/sen': 4.5.9
   '@formkit/auto-animate': 1.0.0-beta.6
   '@hookform/resolvers': 2.9.11_react-hook-form@7.43.5
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
@@ -629,6 +631,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/sen/4.5.9:
+    resolution: {integrity: sha512-QN+pW9fq+XNQoVwjrzxlZELSMSaKxUHlFJ1NApNr8b/KyGvRAL+hNVMhT1jBamtzkcI09yiGq7hdnEfo66rFog==}
+    dev: false
 
   /@formkit/auto-animate/1.0.0-beta.6:
     resolution: {integrity: sha512-PVDhLAlr+B4Xb7e+1wozBUWmXa6BFU8xUPR/W/E+TsQhPS1qkAdAsJ25keEnFrcePSnXHrOsh3tiFbEToOzV9w==}

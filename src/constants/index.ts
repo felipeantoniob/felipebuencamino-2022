@@ -63,8 +63,8 @@ export const PROJECTS = [
       'An interactive drum machine website where users can play 16 drum pads with their mouse or keyboard. The drum samples were sampled from a Roland TR-808 drum machine.',
     image: ts808Image,
     tags: ['react', 'javascript'],
-    codeUrl: 'https://github.com/felipeantoniob/JS-808#readme',
-    siteUrl: 'https://js-808.vercel.app/',
+    codeUrl: 'https://github.com/felipeantoniob/TS-808#readme',
+    siteUrl: 'https://ts-808.vercel.app/',
     id: 3,
     technologies: [
       { name: 'Vite', url: 'https://vitejs.dev/' },
