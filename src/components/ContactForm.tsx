@@ -58,33 +58,33 @@ const ContactForm = () => {
         <div ref={parent}>
           <label htmlFor="name" className="text-sm  sm:text-base">
             Name
+            <input
+              {...register('name')}
+              type="text"
+              className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
+            />
           </label>
-          <input
-            {...register('name')}
-            type="text"
-            className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
-          />
           {errors.name?.message && <p className="text-red-500">{errors.name?.message}</p>}
         </div>
         <div ref={parent}>
           <label htmlFor="email" className="text-sm sm:text-base">
             Email
+            <input
+              {...register('email')}
+              type="text"
+              className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
+            />
           </label>
-          <input
-            {...register('email')}
-            type="text"
-            className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
-          />
           {errors.email?.message && <p className="text-red-500">{errors.email?.message}</p>}
         </div>
         <div ref={parent}>
           <label htmlFor="message" className="text-sm sm:text-base">
             Message
+            <textarea
+              {...register('message')}
+              className="form-textarea h-24 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
+            />
           </label>
-          <textarea
-            {...register('message')}
-            className="form-textarea h-24 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
-          />
           {errors.message?.message && <p className="text-red-500">{errors.message?.message}</p>}
         </div>
         <button className="bg-slate-500 py-4 rounded-md mt-4 text-white text-xl hover:opacity-75 transition-all">
