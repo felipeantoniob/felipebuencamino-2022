@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+
 import ContactForm from '../ContactForm'
 
 const ContactSection = () => {
@@ -15,18 +16,18 @@ const ContactSection = () => {
       className="py-32"
     >
       <h2 className="text-center text-2xl sm:text-4xl">CONTACT ME</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 mt-8">
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2">
         <ContactForm />
         <div className="p-8">
           <p className="text-lg sm:text-xl">
             Have an exciting project you need some help with? Feel free to send me a message, and
             let's chat.
           </p>
-          <p className="mt-8 text-lg sm:text-xl break-words">
+          <p className="mt-8 break-words text-lg sm:text-xl">
             If you have any questions about me or my projects, you can send an email to{' '}
             <a
               href="mailto:felipebuencamino@gmail.com"
-              className="underline italic hover:opacity-75 transition-all"
+              className="italic underline transition-all hover:opacity-75"
             >
               felipebuencamino@gmail.com
             </a>{' '}

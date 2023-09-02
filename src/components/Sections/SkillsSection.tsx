@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react'
 import { motion } from 'framer-motion'
+
 import { child, stagger } from '../../animations'
 
 const SKILLS = [
@@ -65,7 +66,7 @@ const SkillsSection = () => {
         initial="hidden"
         whileInView="visible"
         variants={stagger(0.2)}
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 md:mx-16 mt-12 place-items-center gap-8"
+        className="mt-12 grid grid-cols-2 place-items-center gap-8 sm:grid-cols-3 md:mx-16 md:grid-cols-4"
       >
         {SKILLS.slice(0, 12).map((skill) => (
           <motion.div

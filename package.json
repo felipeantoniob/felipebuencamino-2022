@@ -8,30 +8,34 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write . --plugin=prettier-plugin-astro"
   },
   "dependencies": {
-    "@astrojs/react": "^2.1.0",
-    "@astrojs/tailwind": "^3.1.1",
-    "@emailjs/browser": "^3.10.0",
-    "@fontsource/sen": "^4.5.9",
-    "@formkit/auto-animate": "1.0.0-beta.6",
-    "@hookform/resolvers": "^2.9.10",
-    "@tailwindcss/forms": "^0.5.3",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "astro": "^2.1.6",
-    "astro-icon": "^0.8.0",
-    "framer-motion": "^10.8.5",
-    "prettier-plugin-astro": "^0.7.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-hook-form": "^7.40.0",
-    "react-hot-toast": "^2.4.0",
-    "tailwindcss": "^3.0.24",
-    "zod": "^3.19.1"
+    "@astrojs/react": "^3.3.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@emailjs/browser": "^3.12.1",
+    "@fontsource/sen": "^5.0.19",
+    "@formkit/auto-animate": "0.8.1",
+    "@hookform/resolvers": "^3.3.4",
+    "@tailwindcss/forms": "^0.5.7",
+    "@types/react": "^18.2.75",
+    "@types/react-dom": "^18.2.24",
+    "astro": "^4.6.0",
+    "astro-icon": "^0.8.2",
+    "framer-motion": "^10.18.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.2",
+    "react-hot-toast": "^2.4.1",
+    "tailwindcss": "^3.4.3",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@iconify/react": "^4.1.0"
+    "@iconify/react": "^4.1.1",
+    "@typescript-eslint/parser": "^6.21.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.12.3",
+    "prettier-plugin-tailwindcss": "^0.5.13"
   }
 }

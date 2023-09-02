@@ -1,8 +1,8 @@
 import emailjs from '@emailjs/browser'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { SubmitHandler, useForm } from 'react-hook-form'
-import { toast, Toaster } from 'react-hot-toast'
+import { useForm, type SubmitHandler } from 'react-hook-form'
+import { Toaster, toast } from 'react-hot-toast'
 import { z } from 'zod'
 
 const PUBLIC_KEY = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
@@ -54,14 +54,14 @@ const ContactForm = () => {
   return (
     <>
       <Toaster toastOptions={{ className: 'bg-red-500' }} />
-      <form className="flex flex-col gap-4 mx-4" onSubmit={handleSubmit(onSubmit)}>
+      <form className="mx-4 flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
         <div ref={parent}>
           <label htmlFor="name" className="text-sm  sm:text-base">
             Name
             <input
               {...register('name')}
               type="text"
-              className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
+              className="form-input mt-2 h-12 w-full rounded-md bg-slate-800 focus:border-slate-400 focus:ring-0"
             />
           </label>
           {errors.name?.message && <p className="text-red-500">{errors.name?.message}</p>}
@@ -72,7 +72,7 @@ const ContactForm = () => {
             <input
               {...register('email')}
               type="text"
-              className="form-input h-12 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
+              className="form-input mt-2 h-12 w-full rounded-md bg-slate-800 focus:border-slate-400 focus:ring-0"
             />
           </label>
           {errors.email?.message && <p className="text-red-500">{errors.email?.message}</p>}
@@ -82,12 +82,12 @@ const ContactForm = () => {
             Message
             <textarea
               {...register('message')}
-              className="form-textarea h-24 rounded-md w-full mt-2 bg-slate-800 focus:ring-0 focus:border-slate-400"
+              className="form-textarea mt-2 h-24 w-full rounded-md bg-slate-800 focus:border-slate-400 focus:ring-0"
             />
           </label>
           {errors.message?.message && <p className="text-red-500">{errors.message?.message}</p>}
         </div>
-        <button className="bg-slate-500 py-4 rounded-md mt-4 text-white text-xl hover:opacity-75 transition-all">
+        <button className="mt-4 rounded-md bg-slate-500 py-4 text-xl text-white transition-all hover:opacity-75">
           Submit
         </button>
       </form>

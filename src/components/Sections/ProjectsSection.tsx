@@ -1,33 +1,35 @@
-import { PROJECTS } from '../../constants'
 import { Icon } from '@iconify/react'
+import type { ImageMetadata } from 'astro'
 import { motion } from 'framer-motion'
 
-type Project = typeof PROJECTS[number]
+import { PROJECTS } from '../../constants'
+
+type Project = (typeof PROJECTS)[number]
 
 const ProjectImage = ({
-  imageUrl,
+  image,
   siteUrl,
   projectTitle,
 }: {
-  imageUrl: string
+  image: ImageMetadata
   siteUrl: string
   projectTitle: string
 }) => (
   <a
     href={siteUrl}
     aria-label={`Check out ${projectTitle}'s site`}
-    className="flex-1 border-2 border-slate-700 rounded-md lg:p-0 hover:opacity-50 transition"
+    className="flex-1 rounded-md border-2 border-slate-700 transition hover:opacity-50 lg:p-0"
   >
     <img
-      src={imageUrl}
+      src={image.src}
       alt={`${projectTitle} screenshot`}
-      className="w-full rounded-md aspect-video object-cover shadow shadow-slate-700 pointer-events-none"
+      className="pointer-events-none aspect-video w-full rounded-md object-cover shadow shadow-slate-700"
     />
   </a>
 )
 
 const ProjectTechnologies = ({ technologies }: { technologies: Project['technologies'] }) => (
-  <div className="font-mono mt-8 text-sm">
+  <div className="mt-8 font-mono text-sm">
     {technologies.map((technology, index) => (
       <a
         aria-label={`Go to the ${technology.name} website`}
@@ -57,7 +59,7 @@ const ProjectLinks = ({
   <div
     className={`flex flex-row justify-center  ${
       index % 2 ? 'lg:justify-start' : 'lg:justify-end'
-    } gap-4 mt-8`}
+    } mt-8 gap-4`}
   >
     <a
       href={siteUrl}
@@ -93,13 +95,13 @@ const Project = ({ project, index }: { project: Project; index: number }) => (
     }}
     className={`flex flex-col gap-8 ${index % 2 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
   >
-    <ProjectImage imageUrl={project.image} siteUrl={project.siteUrl} projectTitle={project.title} />
+    <ProjectImage image={project.image} siteUrl={project.siteUrl} projectTitle={project.title} />
     <div
-      className={`flex-1 text-center flex flex-col justify-center ${
+      className={`flex flex-1 flex-col justify-center text-center ${
         index % 2 ? 'lg:text-left' : 'lg:text-right'
       }`}
     >
-      <h3 className="font-bold text-2xl">{project.title}</h3>
+      <h3 className="text-2xl font-bold">{project.title}</h3>
       <p className="mt-8">{project.description}</p>
       <ProjectTechnologies technologies={project.technologies} />
       <ProjectLinks
@@ -116,7 +118,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="pt-16">
       <div className="mx-8">
-        <h2 className="text-2xl sm:text-4xl text-gray-200 font-medium text-center">PROJECTS</h2>
+        <h2 className="text-center text-2xl font-medium text-gray-200 sm:text-4xl">PROJECTS</h2>
         <div className="mt-16 flex flex-col gap-32">
           {PROJECTS.map((project, index) => (
             <Project project={project} index={index} key={index} />

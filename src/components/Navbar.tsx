@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const Navbar = () => {
   return (
     <div className="h-20 w-full">
-      <nav className="max-w-6xl h-full mx-auto">
+      <nav className="mx-auto h-full max-w-6xl">
         <motion.ul
           initial="hidden"
           whileInView="visible"
@@ -12,24 +12,24 @@ const Navbar = () => {
             visible: { opacity: 1, scale: 1, y: 0 },
             hidden: { opacity: 0, scale: 1, y: 0 },
           }}
-          className="flex flex-row gap-2 text-white sm:gap-8 h-full items-center justify-evenly sm:justify-end px-4 text-base sm:text-xl"
+          className="flex h-full flex-row items-center justify-evenly gap-2 px-4 text-base text-white sm:justify-end sm:gap-8 sm:text-xl"
         >
-          <li className="hover:opacity-75 transition-all">
+          <li className="transition-all hover:opacity-75">
             <a aria-label="Go to About section" href="#about">
               ABOUT
             </a>
           </li>
-          <li className="hover:opacity-75 transition-all">
+          <li className="transition-all hover:opacity-75">
             <a aria-label="Go to Projects section" href="#projects">
               PROJECTS
             </a>
           </li>
-          <li className="hover:opacity-75 transition-all">
+          <li className="transition-all hover:opacity-75">
             <a aria-label="Go to Skills section" href="#skills">
               SKILLS
             </a>
           </li>
-          <li className="hover:opacity-75 transition-all">
+          <li className="transition-all hover:opacity-75">
             <a aria-label="Go to Contact section" href="#contact">
               CONTACT
             </a>
