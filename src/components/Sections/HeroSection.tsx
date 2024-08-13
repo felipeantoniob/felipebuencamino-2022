@@ -1,17 +1,20 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-import { child, stagger } from '../../animations'
+import { child, stagger } from "../../animations";
 
 const HeroSection = () => {
   return (
-    <section className="flex  h-screen flex-col justify-center">
+    <section className="flex h-screen flex-col justify-center">
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={stagger(0.3)}
         className="mx-8 sm:w-1/2"
       >
-        <motion.h2 variants={child} className="text-lg font-medium text-gray-200 sm:text-xl">
+        <motion.h2
+          variants={child}
+          className="text-lg font-medium text-gray-200 sm:text-xl"
+        >
           Hi, my name is
         </motion.h2>
         <motion.h1
@@ -20,16 +23,22 @@ const HeroSection = () => {
         >
           Felipe Buencamino.
         </motion.h1>
-        <motion.h1 variants={child} className="mt-4 text-2xl font-medium text-gray-200 sm:text-4xl">
+        <motion.h1
+          variants={child}
+          className="mt-4 text-2xl font-medium text-gray-200 sm:text-4xl"
+        >
           I'm a front end developer.
         </motion.h1>
-        <motion.p variants={child} className="mt-4 text-lg text-gray-200 sm:text-xl">
-          Focused on designing, developing, and maintaining quality websites and applications using
-          React and Typescript.
+        <motion.p
+          variants={child}
+          className="mt-4 text-lg text-gray-200 sm:text-xl"
+        >
+          Focused on designing, developing, and maintaining quality websites and
+          applications using React and Typescript.
         </motion.p>
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

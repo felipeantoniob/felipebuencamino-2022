@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-import ContactForm from '../ContactForm'
+import ContactForm from "../ContactForm";
 
 const ContactSection = () => {
   return (
@@ -20,17 +20,18 @@ const ContactSection = () => {
         <ContactForm />
         <div className="p-8">
           <p className="text-lg sm:text-xl">
-            Have an exciting project you need some help with? Feel free to send me a message, and
-            let's chat.
+            Have an exciting project you need some help with? Feel free to send
+            me a message, and let's chat.
           </p>
           <p className="mt-8 break-words text-lg sm:text-xl">
-            If you have any questions about me or my projects, you can send an email to{' '}
+            If you have any questions about me or my projects, you can send an
+            email to{" "}
             <a
               href="mailto:felipebuencamino@gmail.com"
               className="italic underline transition-all hover:opacity-75"
             >
               felipebuencamino@gmail.com
-            </a>{' '}
+            </a>{" "}
             and I'll get back to you as soon as possible.
           </p>
           <p className="mt-8 text-lg sm:text-xl">
@@ -39,7 +40,7 @@ const ContactSection = () => {
         </div>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default ContactSection
+export default ContactSection;

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
@@ -37,7 +37,7 @@ const Navbar = () => {
         </motion.ul>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,62 +1,62 @@
-import { Icon } from '@iconify/react'
-import { motion } from 'framer-motion'
+import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
 
-import { child, stagger } from '../../animations'
+import { child, stagger } from "../../animations";
 
 const SKILLS = [
   {
-    name: 'HTML5',
-    icon: 'simple-icons:html5',
+    name: "HTML5",
+    icon: "simple-icons:html5",
   },
   {
-    name: 'CSS3',
-    icon: 'simple-icons:css3',
+    name: "CSS3",
+    icon: "simple-icons:css3",
   },
   {
-    name: 'JAVASCRIPT + ES6',
-    icon: 'simple-icons:javascript',
+    name: "JAVASCRIPT + ES6",
+    icon: "simple-icons:javascript",
   },
   {
-    name: 'TYPESCRIPT',
-    icon: 'simple-icons:typescript',
+    name: "TYPESCRIPT",
+    icon: "simple-icons:typescript",
   },
   {
-    name: 'REACT',
-    icon: 'simple-icons:react',
+    name: "REACT",
+    icon: "simple-icons:react",
   },
   {
-    name: 'REACT NATIVE',
-    icon: 'simple-icons:react',
+    name: "REACT NATIVE",
+    icon: "simple-icons:react",
   },
   {
-    name: 'NEXT JS',
-    icon: 'simple-icons:nextdotjs',
+    name: "NEXT JS",
+    icon: "simple-icons:nextdotjs",
   },
   {
-    name: 'REDUX',
-    icon: 'simple-icons:redux',
+    name: "REDUX",
+    icon: "simple-icons:redux",
   },
   {
-    name: 'GIT',
-    icon: 'mdi:git',
+    name: "GIT",
+    icon: "mdi:git",
   },
   {
-    name: 'FIREBASE',
-    icon: 'simple-icons:firebase',
+    name: "FIREBASE",
+    icon: "simple-icons:firebase",
   },
   {
-    name: 'TAILWIND',
-    icon: 'simple-icons:tailwindcss',
+    name: "TAILWIND",
+    icon: "simple-icons:tailwindcss",
   },
   {
-    name: 'FIGMA',
-    icon: 'simple-icons:figma',
+    name: "FIGMA",
+    icon: "simple-icons:figma",
   },
   {
-    name: 'DOCKER',
-    icon: 'simple-icons:docker',
+    name: "DOCKER",
+    icon: "simple-icons:docker",
   },
-] as const
+] as const;
 
 const SkillsSection = () => {
   return (
@@ -80,7 +80,7 @@ const SkillsSection = () => {
         ))}
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default SkillsSection
+export default SkillsSection;
