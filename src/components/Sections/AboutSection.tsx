@@ -21,26 +21,25 @@ const AboutSection = () => {
         </h2>
         <div className="mt-8 flex flex-col gap-4 text-lg sm:text-xl">
           <p>
-            Having the knowledge and skills to create websites and applications
-            from the ground up satisfies a part of me that truly enjoys
-            problem-solving and the production process.
+            I find real satisfaction in building websites and applications from
+            scratch. There’s something incredibly rewarding about tackling
+            challenges and seeing a project come to life.
           </p>
           <p>
-            I am an effective communicator, collaborator, critical thinker, and
-            project organizer, and I hope these skills along with my continued
-            education in the field will bolster my capability as a web developer
-            and aid me in helping others bring their ideas to life on the web
-            efficiently and creatively.
+            I’m someone who loves working with others, thinking critically about
+            problems, and keeping projects organized. I believe these qualities,
+            combined with my ongoing learning in the field, help me turn ideas
+            into effective and creative web solutions.
           </p>
           <p>
-            At the end of the day, my ultimate goal as a front end developer is
-            to create websites and applications that not only look great but are
-            also intuitive and easy to use.
+            At the heart of what I do is a desire to create websites and
+            applications that not only look great but are also easy for people
+            to use.
           </p>
           <p>
-            I am passionate about staying up-to-date with the latest
-            technologies and trends in the industry and am always looking for
-            new and innovative ways to improve my craft.
+            I’m genuinely excited about staying up-to-date with the latest
+            trends and technologies, always looking for new ways to improve and
+            innovate in my work.
           </p>
         </div>
       </motion.div>
