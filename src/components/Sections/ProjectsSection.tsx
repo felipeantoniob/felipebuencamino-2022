@@ -33,7 +33,7 @@ const ProjectTechnologies = ({
 }: {
   technologies: Project["technologies"];
 }) => (
-  <div className="mt-8 font-mono text-sm">
+  <div className="text-start font-mono text-sm">
     {technologies.map((technology, index) => (
       <a
         aria-label={`Go to the ${technology.name} website`}
@@ -41,9 +41,9 @@ const ProjectTechnologies = ({
         href={technology.url}
         rel="noreferrer"
         target="_blank"
-        className="transition-all hover:opacity-75"
+        className="my-1 me-1 inline-flex rounded-md bg-slate-700 px-2 py-1 transition-all hover:opacity-75"
       >
-        {technology.name} &nbsp;
+        {technology.name}
       </a>
     ))}
   </div>
@@ -88,7 +88,7 @@ const ProjectLinks = ({
   </div>
 );
 
-const Project = ({ project, index }: { project: Project; index: number }) => (
+const Project = ({ project }: { project: Project }) => (
   <motion.div
     initial="hidden"
     whileInView="visible"
@@ -97,28 +97,11 @@ const Project = ({ project, index }: { project: Project; index: number }) => (
       visible: { opacity: 1, scale: 1, y: 0 },
       hidden: { opacity: 0, scale: 1, y: 60 },
     }}
-    className={`flex flex-col gap-8 ${index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"}`}
+    className="flex h-full flex-1 flex-col gap-4 rounded-2xl p-4 transition-all hover:bg-slate-800"
   >
-    <ProjectImage
-      image={project.image}
-      siteUrl={project.siteUrl}
-      projectTitle={project.title}
-    />
-    <div
-      className={`flex flex-1 flex-col justify-center text-center ${
-        index % 2 ? "lg:text-left" : "lg:text-right"
-      }`}
-    >
-      <h3 className="text-2xl font-bold">{project.title}</h3>
-      <p className="mt-8">{project.description}</p>
-      <ProjectTechnologies technologies={project.technologies} />
-      <ProjectLinks
-        siteUrl={project.siteUrl}
-        codeUrl={project.codeUrl}
-        projectTitle={project.title}
-        index={index}
-      />
-    </div>
+    <h3 className="text-xl font-bold text-white">{project.title}</h3>
+    <p className="text-start text-base text-slate-300">{project.description}</p>
+    <ProjectTechnologies technologies={project.technologies} />
   </motion.div>
 );
 
@@ -129,9 +112,9 @@ const ProjectsSection = () => {
         <h2 className="text-center text-2xl font-medium text-gray-200 sm:text-4xl">
           PROJECTS
         </h2>
-        <div className="mt-16 flex flex-col gap-32">
+        <div className="mt-16 grid grid-cols-3">
           {PROJECTS.map((project, index) => (
-            <Project project={project} index={index} key={index} />
+            <Project project={project} key={index} />
           ))}
         </div>
       </div>
