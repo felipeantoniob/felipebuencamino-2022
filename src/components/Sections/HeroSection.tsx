@@ -27,14 +27,14 @@ const HeroSection = () => {
           variants={child}
           className="mt-4 text-2xl font-medium text-gray-200 sm:text-4xl"
         >
-          I'm a front end developer.
+          I'm a full stack developer.
         </motion.h1>
         <motion.p
           variants={child}
           className="mt-4 text-lg text-gray-200 sm:text-xl"
         >
-          Focused on designing, developing, and maintaining quality websites and
-          applications using React and Typescript.
+          Specializing in designing, developing, and maintaining high-quality
+          web and mobile applications.
         </motion.p>
       </motion.div>
     </section>
