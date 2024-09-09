@@ -2,7 +2,6 @@ import mexplayImage from "../assets/images/Mexplay.webp";
 import spotifyReplayImage from "../assets/images/SpotifyReplay.webp";
 import toDoListImage from "../assets/images/ToDoList.webp";
 import ts808Image from "../assets/images/TS-808.webp";
-import cinehubImage from "../assets/images/Cinehub.webp";
 
 export const PROJECTS = [
   {
