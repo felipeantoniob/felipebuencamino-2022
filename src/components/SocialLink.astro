@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {
+  iconName: string;
+}
+
+const { iconName } = Astro.props;
+---
+
+<a
+  target="_blank"
+  rel="noopener noreferrer"
+  class="hover:opacity-75 transition-all"
+>
+  <Icon name={iconName} class="w-6 aspect-square" />
+</a>

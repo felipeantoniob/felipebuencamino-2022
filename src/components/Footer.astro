@@ -1,13 +1,6 @@
 ---
-import { Icon } from "astro-icon";
+import SocialLink from "./SocialLink.astro";
 ---
-
-<style lang="css">
-  [astro-icon] {
-    width: 24px;
-    height: 24px;
-  }
-</style>
 
 <footer
   class="border-t-2 h-16 border-white flex flex-row justify-between items-center px-4"
@@ -16,32 +9,25 @@ import { Icon } from "astro-icon";
     © Designed and Built by Felipe Buencamino, 2024
   </p>
   <div class="flex flex-row gap-4">
-    <a
-      aria-label="Go to my Github"
+    <SocialLink
+      iconName="bi:github"
       href="https://github.com/felipeantoniob/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hover:opacity-75 transition-all"
-    >
-      <Icon name="bi:github" />
-    </a>
-    <a
-      aria-label="Send me an email"
+      aria-label="Go to my Github"
+    />
+    <SocialLink
+      iconName="grommet-icons:mail"
       href="mailto:felipebuencamino@gmail.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hover:opacity-75 transition-all"
-    >
-      <Icon name="grommet-icons:mail" />
-    </a>
-    <a
-      aria-label="Message me on Telegram"
+      aria-label="Send me an email"
+    />
+    <SocialLink
+      iconName="fa-brands:telegram-plane"
       href="https://t.me/felipeantoniob"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hover:opacity-75 transition-all"
-    >
-      <Icon name="fa-brands:telegram-plane" />
-    </a>
+      aria-label="Message me on Telegram"
+    />
+    <SocialLink
+      iconName="fa-brands:linkedin"
+      href="https://www.linkedin.com/in/felipe-antonio-buencamino-43143a292"
+      aria-label="Message me on LinkedIn"
+    />
   </div>
 </footer>
