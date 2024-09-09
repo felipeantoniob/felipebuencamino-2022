@@ -44,23 +44,6 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "Cinehub",
-    description:
-      "A movie database app that allows users to search for movies and view details such as the plot summary, genres, and actors and uses the TMDB API to retrieve data on the movies.",
-    image: cinehubImage,
-    tags: ["react", "javascript"],
-    codeUrl: "https://github.com/felipeantoniob/cinehub#readme",
-    siteUrl: "https://cinehub.vercel.app",
-    id: 2,
-    technologies: [
-      { name: "Next.js", url: "https://nextjs.org/" },
-      { name: "Typescript", url: "https://www.typescriptlang.org/" },
-      { name: "Tailwind", url: "https://tailwindcss.com/" },
-      { name: "tRPC", url: "https://trpc.io/" },
-      { name: "Prisma", url: "https://www.prisma.io/" },
-    ],
-  },
-  {
     title: "TS-808",
     description:
       "An interactive drum machine website where users can play 16 drum pads with their mouse or keyboard. The drum samples were sampled from a Roland TR-808 drum machine.",

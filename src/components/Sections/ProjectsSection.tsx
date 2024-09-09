@@ -17,6 +17,7 @@ const ProjectImage = ({
 }) => (
   <a
     href={siteUrl}
+    target="_blank" rel="noopener noreferrer"
     aria-label={`Check out ${projectTitle}'s site`}
     className="flex-1 rounded-md border-2 border-slate-700 transition hover:opacity-50 lg:p-0"
   >
@@ -61,9 +62,8 @@ const ProjectLinks = ({
   index: number;
 }) => (
   <div
-    className={`flex flex-row justify-center ${
-      index % 2 ? "lg:justify-start" : "lg:justify-end"
-    } mt-8 gap-4`}
+    className={`flex flex-row justify-center ${index % 2 ? "lg:justify-start" : "lg:justify-end"
+      } mt-8 gap-4`}
   >
     <a
       href={siteUrl}
@@ -105,9 +105,8 @@ const Project = ({ project, index }: { project: Project; index: number }) => (
       projectTitle={project.title}
     />
     <div
-      className={`flex flex-1 flex-col justify-center text-center ${
-        index % 2 ? "lg:text-left" : "lg:text-right"
-      }`}
+      className={`flex flex-1 flex-col justify-center text-center ${index % 2 ? "lg:text-left" : "lg:text-right"
+        }`}
     >
       <h3 className="text-2xl font-bold">{project.title}</h3>
       <p className="mt-8">{project.description}</p>
